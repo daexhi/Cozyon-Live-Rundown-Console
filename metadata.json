@@ -1,0 +1,6 @@
+{
+  "name": "Live Host Countdown",
+  "description": "A professional real-time countdown reminder for live host rundowns and segment timing with visual notifications.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
