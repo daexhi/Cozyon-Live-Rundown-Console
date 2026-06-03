@@ -163,7 +163,7 @@ export default function TimerDisplay({ segments, onBack }: TimerDisplayProps) {
                 </h2>
               </div>
               {currentSegment?.description && (
-                <p className="text-sm md:text-base text-zinc-400 font-medium max-w-2xl mx-auto leading-relaxed">
+                <p className="text-sm md:text-base text-zinc-400 font-medium max-w-2xl mx-auto leading-relaxed whitespace-pre-wrap">
                   {currentSegment.description}
                 </p>
               )}

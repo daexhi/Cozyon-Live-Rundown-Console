@@ -130,12 +130,12 @@ export default function SegmentForm({ segments, onUpdate, onStart }: SegmentForm
           </button>
         </div>
         <div>
-          <input
-            type="text"
+          <textarea
             placeholder="Description / Host notes (Optional)"
             value={newDescription}
             onChange={(e) => setNewDescription(e.target.value)}
-            className="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition-all"
+            rows={3}
+            className="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition-all resize-none"
           />
         </div>
       </form>
@@ -161,10 +161,10 @@ export default function SegmentForm({ segments, onUpdate, onStart }: SegmentForm
               className="flex items-center gap-4 bg-zinc-900/50 p-4 rounded-xl border border-zinc-800 hover:border-zinc-700 transition-all group"
             >
               <div className="text-zinc-600 font-mono text-xs w-4 self-start mt-1">{index + 1}</div>
-              <div className="flex-1 space-y-0.5">
-                <div className="font-medium text-white">{segment.label}</div>
+              <div className="flex-1 space-y-0.5 min-w-0">
+                <div className="font-medium text-white break-words">{segment.label}</div>
                 {segment.description && (
-                  <div className="text-sm text-zinc-500">{segment.description}</div>
+                  <div className="text-sm text-zinc-500 whitespace-pre-wrap break-words">{segment.description}</div>
                 )}
               </div>
               <div className="font-mono text-red-500 tabular-nums font-bold">
